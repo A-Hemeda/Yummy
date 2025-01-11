@@ -1,0 +1,178 @@
+/*-------------------------------  Start Variables ------------------------------- */
+:root {
+  --dark-color: #0D0D0D;
+  --white-color: #fff;
+  --LightWhite-color: rgba(255, 255, 255, 0.6);
+}
+/*-------------------------------  End Variables ------------------------------- */
+/*-------------------------------  Start Global Rules ------------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
+}
+*,
+*::after,
+*::before {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+img {
+  display: block;
+  width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*-------------------------------  End Global Rules ------------------------------- */
+/* NavBar */
+nav{
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  z-index: 999;
+  display: flex;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+  height: inherit;
+}
+nav #inner-box {
+  display: none;
+  padding-inline: 10px;
+  overflow: hidden;
+}
+nav .links{
+  line-height: 2.2rem;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+nav .nav-header{
+  width: 70px;
+}
+main{
+  background-color: var(--dark-color);
+  padding-top: 50px;
+}
+nav ul li{
+  position: relative;
+}
+figcaption.caption{
+  height: 100%;
+  width: 100%;
+  top: 1%;
+  left:0%;
+  color: #000;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: all 0.5s;
+  background-color: var(--LightWhite-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+figure:hover figcaption.caption{
+  transform: translateY(0%);
+  cursor: pointer;
+}
+section{
+  min-height: 93.5vh;
+}
+.area, .ingredients, nav i{
+  cursor: pointer;
+}
+main #search input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/***** Loader *****/
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: #272b30e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  color: #fff;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  text-indent: -9999em;
+  animation: mulShdSpin 1.3s infinite linear;
+  transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0 -3em 0 0.2em, 
+    2em -2em 0 0em, 3em 0 0 -1em, 
+    2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 0;
+  }
+  12.5% {
+    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 
+    3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  25% {
+    box-shadow: 0 -3em 0 -0.5em, 
+    2em -2em 0 0, 3em 0 0 0.2em, 
+    2em 2em 0 0, 0 3em 0 -1em, 
+    -2em 2em 0 -1em, -3em 0 0 -1em, 
+    -2em -2em 0 -1em;
+  }
+  37.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, 
+     -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  50% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, 
+     -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+  }
+  62.5% {
+    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em,
+     3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, 
+     -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+  }
+  75% {
+    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 
+    3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+  }
+  87.5% {
+    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 
+    3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, 
+    -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+  }
+}
+  
+/***** End Loader *****/
+
+@media (max-width: 767px) {
+main .media{
+  /* width: 95%; */
+  padding-left: 65px;
+}
+}
