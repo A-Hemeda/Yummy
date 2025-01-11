@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--------------------------------- wow.js ---------------------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!---------------------------------  icon favicon URL --------------------------------->
+    <link rel="icon" href="./images/logo.png" />
+    <!---------------------------------  Font Awesome Library ------------------------------- -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!--------------------------------- Template CSS File BootStab ---------------------------------------->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!---------------------------------  Main Template CSS File--------------------------------->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Yummy</title>
+  </head>
+  <body>
+    <nav id="sidebar">
+      <div id="inner-box">
+        <div
+          class="side-box d-flex flex-column justify-content-between h-100 py-5"
+        >
+          <div class="links">
+            <ul>
+              <li>
+                <a href="#search" id="btnSerch" class="navLinks">Search</a>
+              </li>
+              <li>
+                <a href="#categories" id="btnCategories" class="navLinks">Categories</a>
+              </li>
+              <li>
+                <a href="#area" id="btnArea" class="navLinks">Area</a>
+              </li>
+              <li>
+                <a href="#ingredients" id="btnIngredients" class="navLinks">Ingredients</a>
+              </li>
+              <li>
+                <a href="#contact" id="btnContact" class="navLinks">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer">
+            <div class="icons">
+              <ul class="d-flex justify-content-start">
+                <li>
+                  <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="mx-2">
+                  <a href="">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <i class="fa-solid fa-globe"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <footer class="ms-3">
+              <p>
+                Copyright Â© 2019 All Rights <br />
+                Reserved.
+              </p>
+            </footer>
+          </div>
+        </div>
+      </div>
+      <div
+        class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black"
+      >
+        <div class="logo">
+          <img src="./images/logo.png" alt="logo" />
+        </div>
+
+        <div id="icon">
+          <i class="fa-solid fa-bars menuIcon fa-2x"></i>
+        </div>
+
+        <div class="footer">
+          <i class="fa-solid fa-globe d-block"></i>
+          <i class="fa-solid fa-share-nodes"></i>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+<div class="media">
+  <section class="d-flex justify-content-center d-none gy-5" id="search">
+    <div class="w-75 pt-3">
+      <div class="row gy-3">
+        <div class="col-md-6 col-12">
+          <input
+            type="search"
+            placeholder="Search By Name"
+            class="form-control bg-black text-white"
+            name="mealName"
+            id="mealName"
+          />
+        </div>
+        <div class="col-md-6 col-12">
+          <input
+            type="search"
+            placeholder="Search By First Letter"
+            class="form-control bg-black text-white"
+            name="mealFirst"
+            id="mealFirst"
+          />
+        </div>
+      </div>
+      <div id="meals" class="d-block gy-3 mt-5">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="row gy-3" id="mealFilter"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div id="openMeals" class="d-block gy-1 mt-1">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+
+      <div class="row gy-3" id="OpenMealFilter"></div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+  <section id="categories" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="categoriesBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="areaBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="AreaFilter" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="AreaMealsFilter"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="Filter" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="categoriesFilter"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="detailsMeal"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ingredients" class="d-none">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="w-75">
+        <div class="row gy-3" id="ingredientsDetailsMeal"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="d-none">
+    <div
+      class="d-flex justify-content-center align-items-center"
+      style="height: 93.5vh"
+    >
+      <div class="w-50">
+        <form class="row gy-3">
+          <div class="col-md-6 col-12">
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              name="name"
+              class="form-control"
+            />
+          </div>
+          <div class="col-md-6 col-12">
+            <input
+              type="email"
+              placeholder="Enter Your Email"
+              name="email"
+              class="form-control"
+            />
+            <ul class="alert alert-danger p-2 invalid-feedback">
+              <li>Email not valid *exemple@yyy.zzz</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-12">
+            <input
+              type="number"
+              placeholder="Enter Your Phone"
+              name="phone"
+              class="form-control"
+            />
+            <ul class="alert alert-danger p-2 invalid-feedback">
+              <li>Enter valid Phone Number</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-12">
+            <input
+              type="number"
+              placeholder="Enter Your Age"
+              name="age"
+              class="form-control"
+            />
+            <ul class="alert alert-danger p-2 invalid-feedback">
+              <li>Enter valid age</li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-12">
+            <input
+              type="password"
+              placeholder="Enter Your Password"
+              name="password"
+              class="form-control"
+            />
+            <ul class="alert alert-danger p-2 invalid-feedback">
+              <li>
+                Enter valid password *Minimum eight characters, at least one
+                letter and one number:*
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 col-12">
+            <input
+              type="password"
+              placeholder="Repassword"
+              name="repassword"
+              class="form-control"
+            />
+            <ul class="alert alert-danger p-2 invalid-feedback">
+              <li>Enter valid repassword</li>
+            </ul>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <button class="btn btn-outline-danger btnSubmit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="loading d-none">
+    <span class="loader"></span>
+  </div>
+</div>
+    </main>
+
+    <!------------------------------------ java script ---------------------------------------------->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/display.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
